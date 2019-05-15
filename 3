@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<cs50.h>
+
+int OR(int a,int b)
+{
+    if(a==0&&b==0)
+        return 0 ;
+    else
+        return 1;
+}
+int AND(int a,int b)
+{
+    if(a==1&&b==1)
+        return 1 ;
+    else
+        return 0;
+}
+
+int main (void)
+{
+
+    int a=  get_int("Input a:");
+    int b= get_int("Input b:");
+
+
+        printf("a =%d or  b=%d    =%d \n",a,b,OR(a,b));
+        printf("a =%d and b=%d    =%d\n",a,b,AND(a,b));
+
+     return 0;
+}
