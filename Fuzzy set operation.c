@@ -24,6 +24,7 @@ again:
         scanf("%f",(arrB+i));
     }
 //Input validaton
+
     for(int i=0;i!=n;i++)
     {
         if(((*(arrB+i)<1||*(arrB+i)==1) && (*(arrB+i)<1||*(arrB+i)==1))   ||   ((*(arrA+i)<1||*(arrA+i)==1) && (*(arrA+i)<1||*(arrA+i)==1)))
@@ -33,8 +34,8 @@ again:
         }
     }
 
-
-printf("\nA U B is:");
+//finding union
+    printf("\nA U B is:");
     for(int i=0;i!=n;i++)
     {
 
@@ -44,7 +45,9 @@ printf("\nA U B is:");
        printf("\n %d th value of union set  is %0.2f",i+1,*(arrB+i));
 
     }
-     printf("\nA ^ B is:") ;
+//finding intersection
+
+    printf("\nA ^ B is:") ;
     for(int i=0;i!=n;i++)
     {
 
@@ -54,6 +57,7 @@ printf("\nA U B is:");
        printf("\n %d th value of intersection set  is %0.2f",i+1,*(arrB+i));
 
     }
+//finding complement of A
 
     printf("\nComplement of set  A is");
     for(int i=0;i!=n;i++)
@@ -61,6 +65,7 @@ printf("\nA U B is:");
             printf("\n %d th value of complement of set A is %0.2f",i+1,1-*(arrA+i));
         }
 
+//finding complement of B
 
     printf("\nComplement of set  B is");
 
