@@ -27,7 +27,7 @@ again:
 
     for(int i=0;i!=n;i++)
     {
-        if(((*(arrB+i)<1||*(arrB+i)==1) && (*(arrB+i)<1||*(arrB+i)==1))   ||   ((*(arrA+i)<1||*(arrA+i)==1) && (*(arrA+i)<1||*(arrA+i)==1)))
+        if(((*(arrB+i)<=1) && (*(arrB+i)<=1))   ||   ((*(arrA+i)<=1) && (*(arrA+i)<=1)))
         {
             printf("\n Invalid input enter value between 0 &1 :\n");
             goto again;
