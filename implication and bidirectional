@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int main(void)
+{
+    char v1,v2;
+    printf("\nEnter 2 true or false(T/F) value\n");
+    scanf("%c %c",&v1,&v2);
+
+
+    if(v1>=v2)
+    printf("\nImplication is: T");
+    else
+     printf("\nImplication is: F");
+
+     if(v1==v2)
+    printf("\nBi-Conditional is: T");
+    else
+     printf("\nBi-Conditional is: F");
+
+
+
+    return 0;
+
+}
