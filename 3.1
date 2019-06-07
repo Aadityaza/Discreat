@@ -25,10 +25,16 @@ char NEG(char x)
 int main (void)
 {
     char a,b;
-    printf("Enter a,b value");
-    scanf("%c %c",&a,&b);
 
-    printf("%c %c    %c  %c %c %c ",a,b,OR(a,b),NEG(OR(a,b)),NEG(a),NEG(b),AND(NEG(a),NEG(b)));
+    char arr[]={'T','T','F','F'};
+    char arr2[]={'T','F','T','F'};
+    printf("p q   pVq  7(pVq)  7p  7q  7p^7q");
+    for( int i = 0 ; i != 4 ; i++)
+    {
+    		 printf("\n%c %c    %c     %c     %c   %c   %c",arr[i],arr2[i],OR(arr[i],arr2[i]),NEG(OR(arr[i],arr2[i])),NEG(arr[i]),NEG(arr2[i]),AND(NEG(arr[i]),NEG(arr2[i])));
+	}
+
+
     return 0;
 
 }
