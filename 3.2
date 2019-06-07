@@ -1,0 +1,35 @@
+#include<stdio.h>
+
+char OR(char a, char b)
+{
+    if(a=='F'&&b=='F')
+    return 'F';
+    else
+    return'T';
+}
+char IMP(char a, char b)
+{
+    if(a>=b)
+      return 'T';
+    else
+      return'F';
+
+}
+
+char NEG(char x)
+{
+    if(x=='F')
+    return'T';
+    else
+    return 'F';
+}
+int main (void)
+{
+    char a,b;
+    printf("Enter a,b value");
+    scanf("%c %c",&a,&b);
+
+    printf("%c %c    %c  %c  %c ",a,b,NEG(a),IMP(OR(a,b),NEG(b)),OR(NEG(a),b));
+    return 0;
+
+}
