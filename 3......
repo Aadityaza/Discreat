@@ -1,0 +1,38 @@
+#include<stdio.h>
+
+char OR(char a, char b)
+{
+    if(a=='F'&&b=='F')
+    return 'F';
+    else
+    return'T';
+}
+char IMP(char a, char b)
+{
+    if(a>=b)
+      return 'T';
+    else
+      return'F';
+
+}
+
+char NEG(char x)
+{
+    if(x=='F')
+    return'T';
+    else
+    return 'F';
+}
+int main (void)
+{
+
+    char a[]={'T','T','F','F'};
+    char b[]={'T','F','T','F'};
+    printf("p q   p->q  q->p  7p->7q)  7q->7p  7pVq");
+
+    for( int i = 0 ; i != 4 ; i++)
+    {
+    printf("%c %c    %c  %c  %c  %c ",a[i],b[i],IMP(a[i],b[i]),IMP(b[i],a[i]),IMP(NEG(a[i]),NEG(b[i])),IMP(NEG(b[i]),NEG(a[i])),OR(NEG(a[i]),b[i]));
+    return 0;
+    }
+}
