@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+char OR(char a, char b)
+{
+    if(a=='F'&&b=='F')
+    return 'F';
+    else
+    return'T';
+}
+char AND(char a, char b)
+{
+    if(a=='T'&&b=='T')
+    return 'T';
+    else
+    return'F';
+}
+
+char NEG(char x)
+{
+    if(x=='F')
+    return'T';
+    else
+    return 'F';
+}
+int main (void)
+{
+    char a,b;
+
+    char arr[]={'T','T','F','F'};
+    char arr2[]={'T','F','T','F'};
+    printf("p q   pVq  7(pVq)  7p  7q  7p^7q");
+    for( int i = 0 ; i != 4 ; i++)
+    {
+    		 printf("\n%c %c    %c     %c     %c   %c   %c",arr[i],arr2[i],OR(arr[i],arr2[i]),NEG(OR(arr[i],arr2[i])),NEG(arr[i]),NEG(arr2[i]),AND(NEG(arr[i]),NEG(arr2[i])));
+	}
+
+
+    return 0;
+
+}
