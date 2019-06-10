@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int power(int,int);
+
+int main()
+{
+   int a=2,n=5;
+   printf("A^Nis :%d",power(a,n));
+   return 0;
+}
+
+int power(int a,int n)
+{
+
+   if(n==0)
+   return 1;
+   else
+   return a*power(a,n-1);
+}
