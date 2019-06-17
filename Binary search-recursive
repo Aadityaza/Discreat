@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int B_search(int p[],int s,int l,int a)
+{
+    if(s>l)
+    return -1;
+    int mid =s+(l-s)/2;
+
+    if(p[mid]==a)
+    return mid;
+
+    else
+    {
+    if (p[mid]>a)
+        return B_search(p,s,mid-1,a);
+    else        
+        return B_search(p,mid+1,l,a);        
+    }
+}
+
+int main(void)
+
+{
+    int arr[]={1,3,4,5,6,7,8,9,10};
+    int length = sizeof(arr)/sizeof(int);
+    printf("found in position:%d\n",B_search(arr,0,length,54));
+}
