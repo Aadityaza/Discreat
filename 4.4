@@ -1,0 +1,22 @@
+//program to test prime
+#include<stdio.h>
+char testPrime(int n)
+{
+    int c=0;
+    for(int i=1 ;i<=n;i++)
+    {
+        if (n%i==0)
+        c++;
+    }
+    if(c==2)
+    return 'T';
+    else
+    return'F';
+}
+
+int main (void)
+{
+    int n;
+    scanf("%d",&n);
+    printf("%c",testPrime(n));
+}
