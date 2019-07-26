@@ -1,0 +1,27 @@
+#include<stdio.h>
+int prime(int a){
+    int count=0,i;
+    for(i=1;i!=a+1;i++){
+        if(a%i==0){
+            count++;
+        }
+    }
+    if(count==2)
+        return 1;
+        else return 0;
+}
+void twin(int a, int b){
+    if(a-b==2||a-b==-2)
+    printf("%d%d is twin\n",a,b);
+}
+int main()
+{
+int i;
+    for(i=0;i!=100;i++){
+    int a=i/10;
+    int b=i%10;
+    if(prime(a)==1&&prime(b)==1){
+        twin(a,b);
+    }
+    }
+}
