@@ -1,0 +1,26 @@
+#include<stdio.h>
+void hex(int x)
+{
+     int a,i=0,arr[100];
+    while(x!=0){
+    a=x%16;
+    x/=16;
+    i++;
+    
+    arr[i]=a;
+    }
+    
+    for(int j=i;j!=0;j--){
+       if(arr[j]>=10&&arr[j]<=15){
+     printf("%c",arr[j]+55);
+    }
+    else
+     printf("%d",arr[j]);
+    }
+    
+}
+int main()
+{
+    int a=10;
+   hex(a);
+}
